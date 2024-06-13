@@ -3,14 +3,6 @@ custom_nodes: custom_nodes.json
 user_models: user_models.json
 user_custom_nodes: user_custom_nodes.json
 workflows:
-  - id: i0cod4j7qlb
-    name: user_custom_nodes.json
-    description: ''
-    file: user_custom_nodes.json
-  - id: jxpc4gzip8
-    name: user_models.json
-    description: ''
-    file: user_models.json
   - id: x80pmrgxda
     name: basic_comfy_workflow.json
     description: ''
