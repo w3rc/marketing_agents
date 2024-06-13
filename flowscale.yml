@@ -2,4 +2,8 @@ models: models.json
 custom_nodes: custom_nodes.json
 user_models: user_models.json
 user_custom_nodes: user_custom_nodes.json
-workflows: []
+workflows:
+  - id: c9bopgeprw9
+    name: image_generation_workflow.json
+    description: ''
+    file: basic_workflows/image_generation_workflow.json
