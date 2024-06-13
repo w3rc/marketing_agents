@@ -7,3 +7,24 @@ workflows:
     name: image_generation_workflow.json
     description: ''
     file: basic_workflows/image_generation_workflow.json
+    inputs:
+      - path: 9.inputs.filename_prefix
+        parameter_name: filename_prefix
+        type: string
+        demo_type: text
+        category: output
+        randomize: true
+      - path: 6.inputs.text
+        parameter_name: text
+        type: string
+        demo_type: text
+        category: input
+        randomize: false
+      - path: 7.inputs.text
+        parameter_name: text
+        type: string
+        demo_type: text
+        category: input
+        randomize: false
+    outputs:
+      - demo_type: image
