@@ -7,6 +7,21 @@ workflows:
     name: basic_comfy_workflow.json
     description: ''
     file: image_generation/basic_comfy_workflow.json
+    inputs:
+      - path: 9.inputs.filename_prefix
+        parameter_name: filename_prefix
+        type: string
+        demo_type: text
+        category: output
+        randomize: true
+      - path: 6.inputs.text
+        parameter_name: text
+        type: string
+        demo_type: text
+        category: input
+        randomize: false
+    outputs:
+      - demo_type: image
   - id: vnfg68kjua8
     name: simple_workflow.json
     description: ''
