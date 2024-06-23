@@ -1,107 +1,135 @@
 {
+  "1": {
+    "inputs": {
+      "image": "WhatsApp Image 2024-02-23 at 11.48.08 PM (1).jpeg",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "2": {
+    "inputs": {
+      "model_name": "sam_hq_vit_h (2.57GB)"
+    },
+    "class_type": "SAMModelLoader (segment anything)",
+    "_meta": {
+      "title": "SAMModelLoader (segment anything)"
+    }
+  },
   "3": {
     "inputs": {
-      "seed": 156680208700286,
-      "steps": 20,
-      "cfg": 8,
-      "sampler_name": "euler",
-      "scheduler": "normal",
-      "denoise": 1,
-      "model": [
-        "4",
-        0
-      ],
-      "positive": [
-        "6",
-        0
-      ],
-      "negative": [
-        "7",
-        0
-      ],
-      "latent_image": [
-        "5",
-        0
-      ]
+      "model_name": "GroundingDINO_SwinT_OGC (694MB)"
     },
-    "class_type": "KSampler",
+    "class_type": "GroundingDinoModelLoader (segment anything)",
     "_meta": {
-      "title": "KSampler"
+      "title": "GroundingDinoModelLoader (segment anything)"
     }
   },
   "4": {
     "inputs": {
-      "ckpt_name": "v1-5-pruned-emaonly.ckpt"
+      "prompt": "clothes, pants",
+      "threshold": 0.35000000000000003,
+      "sam_model": [
+        "2",
+        0
+      ],
+      "grounding_dino_model": [
+        "3",
+        0
+      ],
+      "image": [
+        "1",
+        0
+      ]
     },
-    "class_type": "CheckpointLoaderSimple",
+    "class_type": "GroundingDinoSAMSegment (segment anything)",
     "_meta": {
-      "title": "Load Checkpoint"
+      "title": "GroundingDinoSAMSegment (segment anything)"
     }
   },
   "5": {
     "inputs": {
-      "width": 512,
-      "height": 512,
-      "batch_size": 1
-    },
-    "class_type": "EmptyLatentImage",
-    "_meta": {
-      "title": "Empty Latent Image"
-    }
-  },
-  "6": {
-    "inputs": {
-      "text": "beautiful scenery nature glass bottle landscape, , purple galaxy bottle,",
-      "clip": [
-        "4",
-        1
+      "mask": [
+        "7",
+        0
       ]
     },
-    "class_type": "CLIPTextEncode",
+    "class_type": "MaskToImage",
     "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
+      "title": "Convert Mask to Image"
     }
   },
   "7": {
     "inputs": {
-      "text": "text, watermark, nsfw, nude, naked",
-      "clip": [
-        "4",
-        1
+      "mask": [
+        "9",
+        0
       ]
     },
-    "class_type": "CLIPTextEncode",
+    "class_type": "InvertMask",
     "_meta": {
-      "title": "CLIP Text Encode (Prompt)"
+      "title": "InvertMask"
     }
   },
   "8": {
     "inputs": {
-      "samples": [
-        "3",
-        0
-      ],
-      "vae": [
-        "4",
-        2
-      ]
-    },
-    "class_type": "VAEDecode",
-    "_meta": {
-      "title": "VAE Decode"
-    }
-  },
-  "9": {
-    "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "8",
+        "23",
         0
       ]
     },
     "class_type": "SaveImage",
     "_meta": {
       "title": "Save Image"
+    }
+  },
+  "9": {
+    "inputs": {
+      "expand": 1,
+      "tapered_corners": false,
+      "mask": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "GrowMask",
+    "_meta": {
+      "title": "GrowMask"
+    }
+  },
+  "23": {
+    "inputs": {
+      "temperature": 0,
+      "hue": 0,
+      "brightness": 0,
+      "contrast": 20,
+      "saturation": 0,
+      "gamma": 1,
+      "image": [
+        "24",
+        0
+      ]
+    },
+    "class_type": "ColorCorrect",
+    "_meta": {
+      "title": "ColorCorrect"
+    }
+  },
+  "24": {
+    "inputs": {
+      "radius": 2,
+      "sigma_factor": 1.5,
+      "image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "Blur",
+    "_meta": {
+      "title": "Blur"
     }
   }
 }
