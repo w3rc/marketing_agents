@@ -4,19 +4,19 @@ custom_nodes: custom_nodes.json
 user_models: user_models.json
 user_custom_nodes: user_custom_nodes.json
 workflows:
-  - id: chziazdv5fe
+  - id: 1cm73hiqyul
     name: basic_comfy_workflow.json
     description: ''
     file: image_generation/basic_comfy_workflow.json
-  - id: 9skxl5iozev
+  - id: pvqbx29yamd
     name: image_blend.json
     description: ''
     file: video_generation/image_blend.json
-  - id: 181flafxl0n
+  - id: zu2ezmlslor
     name: image_blend_2.json
     description: ''
     file: video_generation/image_blend_2.json
-  - id: 8ao1v5gxymn
+  - id: n0k3pfry2kk
     name: simple_workflow.json
     description: ''
     file: video_generation/simple_workflow.json
