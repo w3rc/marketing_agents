@@ -4,40 +4,15 @@ custom_nodes: custom_nodes.json
 user_models: user_models.json
 user_custom_nodes: user_custom_nodes.json
 workflows:
-  - id: 1cm73hiqyul
+  - id: nacbhilxg9r
     name: basic_comfy_workflow.json
     description: ''
     file: image_generation/basic_comfy_workflow.json
-  - id: pvqbx29yamd
+  - id: q8pam95rc2o
     name: image_blend.json
     description: ''
     file: video_generation/image_blend.json
-  - id: zu2ezmlslor
-    name: image_blend_2.json
+  - id: qlk37sixl1p
+    name: image_blend_api.json
     description: ''
-    file: video_generation/image_blend_2.json
-    inputs:
-      - path: 14.inputs.filename_prefix
-        parameter_name: filename_prefix
-        type: string
-        demo_type: text
-        category: output
-        randomize: true
-      - path: 10.inputs.image
-        parameter_name: image
-        type: string
-        demo_type: image
-        category: input
-        randomize: false
-      - path: 11.inputs.image
-        parameter_name: image
-        type: string
-        demo_type: image
-        category: input
-        randomize: false
-    outputs:
-      - demo_type: image
-  - id: n0k3pfry2kk
-    name: simple_workflow.json
-    description: ''
-    file: video_generation/simple_workflow.json
+    file: video_generation/image_blend_api.json
