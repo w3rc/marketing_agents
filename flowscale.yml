@@ -4,26 +4,7 @@ custom_nodes: custom_nodes.json
 user_models: user_models.json
 user_custom_nodes: user_custom_nodes.json
 workflows:
-  - id: tbnt6xyqwx
-    name: image_blending_api.json
+  - id: onai6vo8s3q
+    name: brushnet_api.json
     description: ''
-    file: video_generation/image_blending_api.json
-  - id: 1gtuu6wcoht
-    name: khuda_api.json
-    description: ''
-    file: video_generation/khuda_api.json
-    inputs:
-      - path: 14.inputs.filename_prefix
-        parameter_name: filename_prefix
-        type: string
-        demo_type: text
-        category: output
-        randomize: true
-      - path: 11.inputs.image
-        parameter_name: image
-        type: string
-        demo_type: image
-        category: input
-        randomize: false
-    outputs:
-      - demo_type: image
+    file: video_generation/brushnet_api.json
