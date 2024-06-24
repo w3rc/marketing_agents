@@ -1,4 +1,4 @@
-version: 0.0.411111111
+version: 1
 models: models.json
 custom_nodes: custom_nodes.json
 user_models: user_models.json
