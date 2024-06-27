@@ -4,41 +4,20 @@ custom_nodes: custom_nodes.json
 user_models: user_models.json
 user_custom_nodes: user_custom_nodes.json
 workflows:
-  - id: amreohgm9sq
+  - id: 6fysipwho1
+    name: user_custom_nodes.json
+    description: ''
+    file: user_custom_nodes.json
+  - id: teyvqicgrtj
+    name: user_models.json
+    description: ''
+    file: user_models.json
+  - id: kxsl4g3qbj
     name: generate_description_api.json
     description: ''
     file: video_generation/generate_description_api.json
-    inputs:
-      - path: 20.inputs.filename_prefix
-        parameter_name: filename_prefix
-        type: string
-        demo_type: text
-        category: output
-        randomize: true
-      - path: 5.inputs.image
-        parameter_name: image
-        type: string
-        demo_type: image
-        category: input
-        randomize: false
-    outputs:
-      - demo_type: image
-  - id: ogaptnlmek
+  - id: myjyktedo3j
     name: simple_api.json
     description: ''
     file: video_generation/simple_api.json
-    inputs:
-      - path: 9.inputs.filename_prefix
-        parameter_name: filename_prefix
-        type: string
-        demo_type: text
-        category: output
-        randomize: true
-      - path: 6.inputs.text
-        parameter_name: text
-        type: string
-        demo_type: text
-        category: input
-        randomize: false
-    outputs:
-      - demo_type: image
+    skip_preprocess: false
