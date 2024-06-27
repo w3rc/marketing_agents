@@ -1,11 +1,26 @@
 [
   {
-    "url": "https://github.com/gokayfem/ComfyUI_VLM_nodes",
+    "url": "https://github.com/storyicon/comfyui_segment_anything",
     "path": "custom_nodes",
     "fetch_type": "git-clone"
   },
   {
-    "url": "https://github.com/WASasquatch/was-node-suite-comfyui",
+    "url": "https://github.com/storyicon/comfyui_segment_anything",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone"
+  },
+  {
+    "url": "https://github.com/storyicon/comfyui_segment_anything",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone"
+  },
+  {
+    "url": "https://github.com/storyicon/comfyui_segment_anything",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone"
+  },
+  {
+    "url": "https://github.com/Fannovel16/comfyui_controlnet_aux",
     "path": "custom_nodes",
     "fetch_type": "git-clone"
   }
