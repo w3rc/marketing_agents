@@ -4,25 +4,6 @@ custom_nodes: custom_nodes.json
 user_models: user_models.json
 user_custom_nodes: user_custom_nodes.json
 workflows:
-  - id: ukxxgjtja
-    name: generate_description_api.json
-    description: ''
-    file: video_generation/generate_description_api.json
-    inputs:
-      - path: 20.inputs.filename_prefix
-        parameter_name: filename_prefix
-        type: string
-        demo_type: text
-        category: output
-        randomize: true
-      - path: 5.inputs.image
-        parameter_name: image
-        type: string
-        demo_type: image
-        category: input
-        randomize: false
-    outputs:
-      - demo_type: image
   - id: efeqaiqdbh5
     name: simple_api.json
     description: ''
