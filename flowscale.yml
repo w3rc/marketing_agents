@@ -8,7 +8,7 @@ workflows:
     name: background_change_api.json
     description: ''
     file: image_generation/background_change_api.json
-    skip_preprocess: false
+    skip_preprocess: true
     inputs:
       - path: 9.inputs.filename_prefix
         parameter_name: filename_prefix
