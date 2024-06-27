@@ -1,31 +1,11 @@
 [
   {
-    "url": "https://github.com/nullquant/ComfyUI-BrushNet",
+    "url": "https://github.com/gokayfem/ComfyUI_VLM_nodes",
     "path": "custom_nodes",
     "fetch_type": "git-clone"
   },
   {
     "url": "https://github.com/WASasquatch/was-node-suite-comfyui",
-    "path": "custom_nodes",
-    "fetch_type": "git-clone"
-  },
-  {
-    "url": "https://github.com/audioscavenger/save-image-extended-comfyui",
-    "path": "custom_nodes",
-    "fetch_type": "git-clone"
-  },
-  {
-    "url": "",
-    "path": "custom_nodes",
-    "fetch_type": "git-clone"
-  },
-  {
-    "url": "https://github.com/cubiq/ComfyUI_essentials",
-    "path": "custom_nodes",
-    "fetch_type": "git-clone"
-  },
-  {
-    "url": "",
     "path": "custom_nodes",
     "fetch_type": "git-clone"
   }
