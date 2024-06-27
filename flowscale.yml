@@ -4,14 +4,6 @@ custom_nodes: custom_nodes.json
 user_models: user_models.json
 user_custom_nodes: user_custom_nodes.json
 workflows:
-  - id: 6fysipwho1
-    name: user_custom_nodes.json
-    description: ''
-    file: user_custom_nodes.json
-  - id: teyvqicgrtj
-    name: user_models.json
-    description: ''
-    file: user_models.json
   - id: kxsl4g3qbj
     name: generate_description_api.json
     description: ''
