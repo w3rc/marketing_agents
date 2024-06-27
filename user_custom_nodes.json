@@ -1,21 +1,21 @@
 [
   {
-    "url": "https://github.com/storyicon/comfyui_segment_anything",
+    "url": "https://github.com/jakechai/ComfyUI-JakeUpgrade",
     "path": "custom_nodes",
     "fetch_type": "git-clone"
   },
   {
-    "url": "https://github.com/storyicon/comfyui_segment_anything",
+    "url": "https://github.com/jakechai/ComfyUI-JakeUpgrade",
     "path": "custom_nodes",
     "fetch_type": "git-clone"
   },
   {
-    "url": "https://github.com/storyicon/comfyui_segment_anything",
+    "url": "https://github.com/jakechai/ComfyUI-JakeUpgrade",
     "path": "custom_nodes",
     "fetch_type": "git-clone"
   },
   {
-    "url": "https://github.com/storyicon/comfyui_segment_anything",
+    "url": "https://github.com/jakechai/ComfyUI-JakeUpgrade",
     "path": "custom_nodes",
     "fetch_type": "git-clone"
   },
