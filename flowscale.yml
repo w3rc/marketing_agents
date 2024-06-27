@@ -6,7 +6,7 @@ user_custom_nodes: user_custom_nodes.json
 workflows:
   - id: agh4m2k9bot
     name: simple_api.json
-    description: ""
+    description: ''
     file: video_generation/simple_api.json
     inputs:
       - path: 9.inputs.filename_prefix
