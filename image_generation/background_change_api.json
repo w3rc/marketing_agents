@@ -1,0 +1,235 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 845132332683322,
+      "steps": 40,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "karras",
+      "denoise": 1,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "21",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "KSampler"
+  },
+  "4": {
+    "inputs": {
+      "ckpt_name": "realvision-v6-b1.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "6": {
+    "inputs": {
+      "text": "indian girl, tshirt, realistic, in time square, golden hour, detailed eyes, detailed face and detailed skin, short sleeve",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "7": {
+    "inputs": {
+      "text": "(deformed iris, deformed pupils, semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime), text, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck, (embedding:baddream:1), (embedding:unrealisticdream:1), (embedding:badhands:1), (embedding:betterhands:1), (embedding:fastnegative:1), (embedding:negativehand:1)",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "27",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "10": {
+    "inputs": {
+      "image": "s-wom-reg-hs-pocket-domore-must-young-trendz-original-imag9khfzjb7uh5z.webp",
+      "choose file to upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "12": {
+    "inputs": {
+      "model_name": "sam_hq_vit_h (2.57GB)"
+    },
+    "class_type": "SAMModelLoader (segment anything)"
+  },
+  "13": {
+    "inputs": {
+      "model_name": "GroundingDINO_SwinT_OGC (694MB)"
+    },
+    "class_type": "GroundingDinoModelLoader (segment anything)"
+  },
+  "14": {
+    "inputs": {
+      "prompt": "clothes",
+      "threshold": 0.8,
+      "sam_model": [
+        "12",
+        0
+      ],
+      "grounding_dino_model": [
+        "13",
+        0
+      ],
+      "image": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "GroundingDinoSAMSegment (segment anything)"
+  },
+  "15": {
+    "inputs": {
+      "images": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "16": {
+    "inputs": {
+      "mask": [
+        "14",
+        1
+      ]
+    },
+    "class_type": "InvertMask (segment anything)"
+  },
+  "17": {
+    "inputs": {
+      "mask": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "MaskToImage"
+  },
+  "18": {
+    "inputs": {
+      "images": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "19": {
+    "inputs": {
+      "control_net_name": "control_v11p_sd15_openpose.pth"
+    },
+    "class_type": "ControlNetLoader"
+  },
+  "20": {
+    "inputs": {
+      "grow_mask_by": 6,
+      "pixels": [
+        "14",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ],
+      "mask": [
+        "16",
+        0
+      ]
+    },
+    "class_type": "VAEEncodeForInpaint"
+  },
+  "21": {
+    "inputs": {
+      "strength": 1,
+      "conditioning": [
+        "6",
+        0
+      ],
+      "control_net": [
+        "19",
+        0
+      ],
+      "image": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "ControlNetApply"
+  },
+  "22": {
+    "inputs": {
+      "detect_hand": "enable",
+      "detect_body": "enable",
+      "detect_face": "enable",
+      "resolution": 512,
+      "image": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "OpenposePreprocessor"
+  },
+  "23": {
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "27": {
+    "inputs": {
+      "upscale_model": [
+        "28",
+        0
+      ],
+      "image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel"
+  },
+  "28": {
+    "inputs": {
+      "model_name": "RealESRGAN_x2.pth"
+    },
+    "class_type": "UpscaleModelLoader"
+  }
+}
