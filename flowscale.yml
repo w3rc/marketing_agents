@@ -1,4 +1,4 @@
-version: 5
+version: 6
 models: models.json
 custom_nodes: custom_nodes.json
 user_models: user_models.json
@@ -21,3 +21,18 @@ workflows:
     description: ''
     file: video_generation/simple_api.json
     skip_preprocess: false
+    inputs:
+      - path: 9.inputs.filename_prefix
+        parameter_name: filename_prefix
+        type: string
+        demo_type: text
+        category: output
+        randomize: true
+      - path: 6.inputs.text
+        parameter_name: text
+        type: string
+        demo_type: text
+        category: input
+        randomize: false
+    outputs:
+      - demo_type: image
