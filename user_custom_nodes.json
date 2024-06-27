@@ -1,12 +1,1 @@
-[
-  {
-    "url": "https://github.com/gokayfem/ComfyUI_VLM_nodes",
-    "path": "custom_nodes",
-    "fetch_type": "git-clone"
-  },
-  {
-    "url": "https://github.com/WASasquatch/was-node-suite-comfyui",
-    "path": "custom_nodes",
-    "fetch_type": "git-clone"
-  }
-]
+[]
