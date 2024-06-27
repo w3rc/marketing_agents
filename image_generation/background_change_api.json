@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 845132332683322,
+      "seed": 162003261057730,
       "steps": 40,
       "cfg": 7,
       "sampler_name": "dpmpp_2m_sde",
@@ -24,23 +24,32 @@
         0
       ]
     },
-    "class_type": "KSampler"
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
   },
   "4": {
     "inputs": {
-      "ckpt_name": "realvision-v6-b1.safetensors"
+      "ckpt_name": "v1-5-pruned-emaonly.ckpt"
     },
-    "class_type": "CheckpointLoaderSimple"
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
   },
   "6": {
     "inputs": {
-      "text": "indian girl, tshirt, realistic, in time square, golden hour, detailed eyes, detailed face and detailed skin, short sleeve",
+      "text": "indian man, shirt, realistic, in time square, golden hour, detailed eyes, detailed face and detailed skin, short sleeve",
       "clip": [
         "4",
         1
       ]
     },
-    "class_type": "CLIPTextEncode"
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
   },
   "7": {
     "inputs": {
@@ -50,7 +59,10 @@
         1
       ]
     },
-    "class_type": "CLIPTextEncode"
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
   },
   "8": {
     "inputs": {
@@ -63,7 +75,10 @@
         2
       ]
     },
-    "class_type": "VAEDecode"
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
   },
   "9": {
     "inputs": {
@@ -73,26 +88,38 @@
         0
       ]
     },
-    "class_type": "SaveImage"
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
   },
   "10": {
     "inputs": {
-      "image": "s-wom-reg-hs-pocket-domore-must-young-trendz-original-imag9khfzjb7uh5z.webp",
-      "choose file to upload": "image"
+      "image": "vishnu.jpeg",
+      "upload": "image"
     },
-    "class_type": "LoadImage"
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
   },
   "12": {
     "inputs": {
       "model_name": "sam_hq_vit_h (2.57GB)"
     },
-    "class_type": "SAMModelLoader (segment anything)"
+    "class_type": "SAMModelLoader (segment anything)",
+    "_meta": {
+      "title": "SAMModelLoader (segment anything)"
+    }
   },
   "13": {
     "inputs": {
       "model_name": "GroundingDINO_SwinT_OGC (694MB)"
     },
-    "class_type": "GroundingDinoModelLoader (segment anything)"
+    "class_type": "GroundingDinoModelLoader (segment anything)",
+    "_meta": {
+      "title": "GroundingDinoModelLoader (segment anything)"
+    }
   },
   "14": {
     "inputs": {
@@ -111,7 +138,10 @@
         0
       ]
     },
-    "class_type": "GroundingDinoSAMSegment (segment anything)"
+    "class_type": "GroundingDinoSAMSegment (segment anything)",
+    "_meta": {
+      "title": "GroundingDinoSAMSegment (segment anything)"
+    }
   },
   "15": {
     "inputs": {
@@ -120,7 +150,10 @@
         0
       ]
     },
-    "class_type": "PreviewImage"
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
   },
   "16": {
     "inputs": {
@@ -129,7 +162,10 @@
         1
       ]
     },
-    "class_type": "InvertMask (segment anything)"
+    "class_type": "InvertMask (segment anything)",
+    "_meta": {
+      "title": "InvertMask (segment anything)"
+    }
   },
   "17": {
     "inputs": {
@@ -138,7 +174,10 @@
         0
       ]
     },
-    "class_type": "MaskToImage"
+    "class_type": "MaskToImage",
+    "_meta": {
+      "title": "Convert Mask to Image"
+    }
   },
   "18": {
     "inputs": {
@@ -147,13 +186,19 @@
         0
       ]
     },
-    "class_type": "PreviewImage"
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
   },
   "19": {
     "inputs": {
-      "control_net_name": "control_v11p_sd15_openpose.pth"
+      "control_net_name": "control_v11p_sd15_openpose_fp16.safetensors"
     },
-    "class_type": "ControlNetLoader"
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model"
+    }
   },
   "20": {
     "inputs": {
@@ -171,7 +216,10 @@
         0
       ]
     },
-    "class_type": "VAEEncodeForInpaint"
+    "class_type": "VAEEncodeForInpaint",
+    "_meta": {
+      "title": "VAE Encode (for Inpainting)"
+    }
   },
   "21": {
     "inputs": {
@@ -189,7 +237,10 @@
         0
       ]
     },
-    "class_type": "ControlNetApply"
+    "class_type": "ControlNetApply",
+    "_meta": {
+      "title": "Apply ControlNet"
+    }
   },
   "22": {
     "inputs": {
@@ -202,7 +253,10 @@
         0
       ]
     },
-    "class_type": "OpenposePreprocessor"
+    "class_type": "OpenposePreprocessor",
+    "_meta": {
+      "title": "OpenPose Pose"
+    }
   },
   "23": {
     "inputs": {
@@ -211,7 +265,10 @@
         0
       ]
     },
-    "class_type": "PreviewImage"
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
   },
   "27": {
     "inputs": {
@@ -224,12 +281,18 @@
         0
       ]
     },
-    "class_type": "ImageUpscaleWithModel"
+    "class_type": "ImageUpscaleWithModel",
+    "_meta": {
+      "title": "Upscale Image (using Model)"
+    }
   },
   "28": {
     "inputs": {
       "model_name": "RealESRGAN_x2.pth"
     },
-    "class_type": "UpscaleModelLoader"
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "Load Upscale Model"
+    }
   }
 }
