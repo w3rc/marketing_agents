@@ -3,4 +3,8 @@ models: models.json
 custom_nodes: custom_nodes.json
 user_models: user_models.json
 user_custom_nodes: user_custom_nodes.json
-workflows: []
+workflows:
+  - id: tf586p92by
+    name: background_change_api.json
+    description: ''
+    file: image_generation/background_change_api.json
