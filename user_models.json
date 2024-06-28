@@ -5,13 +5,13 @@
     "fetch_type": "download"
   },
   {
-    "url": "https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15_openpose_fp16.safetensors",
-    "path": "models/controlnet",
+    "url": "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt",
+    "path": "models/checkpoints",
     "fetch_type": "download"
   },
   {
-    "url": "https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt",
-    "path": "models/checkpoints",
+    "url": "https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15_openpose_fp16.safetensors",
+    "path": "models/controlnet",
     "fetch_type": "download"
   }
 ]
