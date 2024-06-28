@@ -1485,18 +1485,6 @@
       "title": "Color To Mask"
     }
   },
-  "528": {
-    "inputs": {
-      "images": [
-        "536",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image"
-    }
-  },
   "530": {
     "inputs": {
       "method": "mkl",
@@ -1671,6 +1659,19 @@
     "class_type": "PreviewImage",
     "_meta": {
       "title": "Preview Image"
+    }
+  },
+  "546": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "536",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
     }
   }
 }
