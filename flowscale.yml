@@ -3,8 +3,4 @@ models: models.json
 custom_nodes: custom_nodes.json
 user_models: user_models.json
 user_custom_nodes: user_custom_nodes.json
-workflows:
-  - id: ku4sr8on8ag
-    name: ic_light_api.json
-    description: ''
-    file: image_generation/ic_light_api.json
+workflows: []
