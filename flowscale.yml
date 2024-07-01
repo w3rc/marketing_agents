@@ -3,8 +3,4 @@ models: models.json
 custom_nodes: custom_nodes.json
 user_models: user_models.json
 user_custom_nodes: user_custom_nodes.json
-workflows:
-  - id: 7sm18dt9g5c
-    name: background_change_api.json
-    description: ''
-    file: image_generation/background_change_api.json
+workflows: []
