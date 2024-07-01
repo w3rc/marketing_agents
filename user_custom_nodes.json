@@ -1,6 +1,6 @@
 [
   {
-    "url": "https://github.com/jakechai/ComfyUI-JakeUpgrade",
+    "url": "https://github.com/storyicon/comfyui_segment_anything",
     "path": "custom_nodes",
     "fetch_type": "git-clone"
   },
