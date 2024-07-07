@@ -1,27 +1,3 @@
 [
-  {
-    "url": "https://github.com/storyicon/comfyui_segment_anything",
-    "path": "custom_nodes",
-    "fetch_type": "git-clone"
-  },
-  {
-    "url": "https://github.com/storyicon/comfyui_segment_anything",
-    "path": "custom_nodes",
-    "fetch_type": "git-clone"
-  },
-  {
-    "url": "https://github.com/storyicon/comfyui_segment_anything",
-    "path": "custom_nodes",
-    "fetch_type": "git-clone"
-  },
-  {
-    "url": "https://github.com/storyicon/comfyui_segment_anything",
-    "path": "custom_nodes",
-    "fetch_type": "git-clone"
-  },
-  {
-    "url": "https://github.com/Fannovel16/comfyui_controlnet_aux",
-    "path": "custom_nodes",
-    "fetch_type": "git-clone"
-  }
+  
 ]
