@@ -33,3 +33,4 @@ workflows:
     outputs:
       - label: AI Fashion Model Output
         demo_type: image
+    skip_preprocess: true
