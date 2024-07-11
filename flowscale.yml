@@ -34,3 +34,7 @@ workflows:
       - label: AI Fashion Model Output
         demo_type: image
     skip_preprocess: true
+  - id: fh54k1fu0hf
+    name: bg_change_api.json
+    description: ''
+    file: r/bg_change_api.json
