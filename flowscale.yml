@@ -1,4 +1,4 @@
-version: 33
+version: 34
 models: models.json
 custom_nodes: custom_nodes.json
 user_models: user_models.json
@@ -11,23 +11,23 @@ workflows:
     inputs:
       - path: 9.inputs.filename_prefix
         label: filename_prefix
-        parameter_name: filename_prefix_42059
+        parameter_name: filename_prefix_47430
         type: string
         demo_type: text
         category: output
         randomize: true
-      - path: 7.inputs.text
-        label: negative prompt
-        parameter_name: text_97868
+      - path: 6.inputs.text
+        label: ''
+        parameter_name: text_58956
         type: string
         demo_type: text
         category: input
         randomize: false
-      - path: 6.inputs.text
-        label: ''
-        parameter_name: text_46979
+      - path: 10.inputs.image
+        label: testest
+        parameter_name: image_50631
         type: string
-        demo_type: text
+        demo_type: image
         category: input
         randomize: false
     outputs:
