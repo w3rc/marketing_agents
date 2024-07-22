@@ -1,4 +1,4 @@
-version: 31
+version: 32
 models: models.json
 custom_nodes: custom_nodes.json
 user_models: user_models.json
@@ -11,27 +11,27 @@ workflows:
     inputs:
       - path: 9.inputs.filename_prefix
         label: filename_prefix
-        parameter_name: filename_prefix_78489
+        parameter_name: filename_prefix_42059
         type: string
         demo_type: text
         category: output
-        randomize: false
-      - path: 10.inputs.image
-        label: Input Model Image
-        parameter_name: image_81870
+        randomize: true
+      - path: 7.inputs.text
+        label: negative prompt
+        parameter_name: text_97868
         type: string
-        demo_type: image
+        demo_type: text
         category: input
         randomize: false
       - path: 6.inputs.text
-        label: Positive Prompt
-        parameter_name: text_23764
+        label: ''
+        parameter_name: text_46979
         type: string
         demo_type: text
         category: input
         randomize: false
     outputs:
-      - label: AI Fashion Model Output
+      - label: Output
         demo_type: image
     skip_preprocess: true
   - id: fh54k1fu0hf
