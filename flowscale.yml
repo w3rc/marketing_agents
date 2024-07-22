@@ -1,4 +1,4 @@
-version: 34
+version: 35
 models: models.json
 custom_nodes: custom_nodes.json
 user_models: user_models.json
@@ -39,3 +39,21 @@ workflows:
     description: ''
     file: r/bg_change_api.json
     skip_preprocess: false
+    inputs:
+      - path: 9.inputs.filename_prefix
+        label: filename_prefix
+        parameter_name: filename_prefix_83104
+        type: string
+        demo_type: text
+        category: output
+        randomize: true
+      - path: 7.inputs.text
+        label: ''
+        parameter_name: text_83039
+        type: string
+        demo_type: text
+        category: input
+        randomize: false
+    outputs:
+      - label: Output
+        demo_type: image
