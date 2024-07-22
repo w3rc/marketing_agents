@@ -57,3 +57,7 @@ workflows:
     outputs:
       - label: Output
         demo_type: image
+  - id: rnnjmpewdr
+    name: description_api.json
+    description: ''
+    file: rtcff/description_api.json
