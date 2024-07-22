@@ -1,18 +1,18 @@
 {
   "3": {
     "inputs": {
-      "seed": 162003261057730,
-      "steps": 40,
-      "cfg": 7,
-      "sampler_name": "dpmpp_2m_sde",
-      "scheduler": "karras",
+      "seed": 886236542325005,
+      "steps": 20,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
       "denoise": 1,
       "model": [
         "4",
         0
       ],
       "positive": [
-        "21",
+        "6",
         0
       ],
       "negative": [
@@ -20,7 +20,7 @@
         0
       ],
       "latent_image": [
-        "20",
+        "5",
         0
       ]
     },
@@ -38,9 +38,23 @@
       "title": "Load Checkpoint"
     }
   },
+  "5": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
   "6": {
     "inputs": {
-      "text": "indian man, shirt, realistic, in time square, golden hour, detailed eyes, detailed face and detailed skin, short sleeve",
+      "text": [
+        "30",
+        0
+      ],
       "clip": [
         "4",
         1
@@ -53,7 +67,7 @@
   },
   "7": {
     "inputs": {
-      "text": "(deformed iris, deformed pupils, semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime), text, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck, (embedding:baddream:1), (embedding:unrealisticdream:1), (embedding:badhands:1), (embedding:betterhands:1), (embedding:fastnegative:1), (embedding:negativehand:1)",
+      "text": "text, watermark",
       "clip": [
         "4",
         1
@@ -84,7 +98,7 @@
     "inputs": {
       "filename_prefix": "ComfyUI",
       "images": [
-        "27",
+        "8",
         0
       ]
     },
@@ -93,206 +107,34 @@
       "title": "Save Image"
     }
   },
-  "10": {
+  "29": {
     "inputs": {
-      "image": "vishnu.jpeg",
-      "upload": "image"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "12": {
-    "inputs": {
-      "model_name": "sam_hq_vit_h (2.57GB)"
-    },
-    "class_type": "SAMModelLoader (segment anything)",
-    "_meta": {
-      "title": "SAMModelLoader (segment anything)"
-    }
-  },
-  "13": {
-    "inputs": {
-      "model_name": "GroundingDINO_SwinT_OGC (694MB)"
-    },
-    "class_type": "GroundingDinoModelLoader (segment anything)",
-    "_meta": {
-      "title": "GroundingDinoModelLoader (segment anything)"
-    }
-  },
-  "14": {
-    "inputs": {
-      "prompt": "clothes",
-      "threshold": 0.8,
-      "sam_model": [
-        "12",
-        0
-      ],
-      "grounding_dino_model": [
-        "13",
-        0
-      ],
-      "image": [
-        "10",
+      "text": [
+        "30",
         0
       ]
     },
-    "class_type": "GroundingDinoSAMSegment (segment anything)",
+    "class_type": "ShowText|pysssss",
     "_meta": {
-      "title": "GroundingDinoSAMSegment (segment anything)"
+      "title": "Show Text 🐍"
     }
   },
-  "15": {
+  "30": {
     "inputs": {
-      "images": [
-        "14",
-        0
-      ]
+      "model": "gpt-4-0613",
+      "seed": 51341600993371,
+      "max_tokens": 512,
+      "system_prompt": "Create a stable diffusion prompt for creating an image of a beautiful scenary",
+      "a_role": "user",
+      "a": "",
+      "b_role": "assistant",
+      "b": "",
+      "c_role": "user",
+      "c": ""
     },
-    "class_type": "PreviewImage",
+    "class_type": "NegiTools_OpenAiGpt",
     "_meta": {
-      "title": "Preview Image"
-    }
-  },
-  "16": {
-    "inputs": {
-      "mask": [
-        "14",
-        1
-      ]
-    },
-    "class_type": "InvertMask (segment anything)",
-    "_meta": {
-      "title": "InvertMask (segment anything)"
-    }
-  },
-  "17": {
-    "inputs": {
-      "mask": [
-        "16",
-        0
-      ]
-    },
-    "class_type": "MaskToImage",
-    "_meta": {
-      "title": "Convert Mask to Image"
-    }
-  },
-  "18": {
-    "inputs": {
-      "images": [
-        "17",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image"
-    }
-  },
-  "19": {
-    "inputs": {
-      "control_net_name": "control_v11p_sd15_openpose_fp16.safetensors"
-    },
-    "class_type": "ControlNetLoader",
-    "_meta": {
-      "title": "Load ControlNet Model"
-    }
-  },
-  "20": {
-    "inputs": {
-      "grow_mask_by": 6,
-      "pixels": [
-        "14",
-        0
-      ],
-      "vae": [
-        "4",
-        2
-      ],
-      "mask": [
-        "16",
-        0
-      ]
-    },
-    "class_type": "VAEEncodeForInpaint",
-    "_meta": {
-      "title": "VAE Encode (for Inpainting)"
-    }
-  },
-  "21": {
-    "inputs": {
-      "strength": 1,
-      "conditioning": [
-        "6",
-        0
-      ],
-      "control_net": [
-        "19",
-        0
-      ],
-      "image": [
-        "22",
-        0
-      ]
-    },
-    "class_type": "ControlNetApply",
-    "_meta": {
-      "title": "Apply ControlNet"
-    }
-  },
-  "22": {
-    "inputs": {
-      "detect_hand": "enable",
-      "detect_body": "enable",
-      "detect_face": "enable",
-      "resolution": 512,
-      "image": [
-        "10",
-        0
-      ]
-    },
-    "class_type": "OpenposePreprocessor",
-    "_meta": {
-      "title": "OpenPose Pose"
-    }
-  },
-  "23": {
-    "inputs": {
-      "images": [
-        "22",
-        0
-      ]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image"
-    }
-  },
-  "27": {
-    "inputs": {
-      "upscale_model": [
-        "28",
-        0
-      ],
-      "image": [
-        "8",
-        0
-      ]
-    },
-    "class_type": "ImageUpscaleWithModel",
-    "_meta": {
-      "title": "Upscale Image (using Model)"
-    }
-  },
-  "28": {
-    "inputs": {
-      "model_name": "RealESRGAN_x2.pth"
-    },
-    "class_type": "UpscaleModelLoader",
-    "_meta": {
-      "title": "Load Upscale Model"
+      "title": "OpenAI GPT 🧅"
     }
   }
 }
