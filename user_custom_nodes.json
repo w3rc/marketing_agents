@@ -95,5 +95,41 @@
     "nodes": [
       "Save Text File"
     ]
+  },
+  {
+    "url": "https://github.com/KoreTeknology/ComfyUI-Universal-Styler",
+    "name": "ComfyUI-Universal-Styler",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "nodes": [
+      "ShowText|pysssss"
+    ]
+  },
+  {
+    "url": "https://github.com/natto-maki/ComfyUI-NegiTools",
+    "name": "ComfyUI-NegiTools",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "nodes": [
+      "NegiTools_OpenAiGpt"
+    ]
+  },
+  {
+    "url": "https://github.com/gokayfem/ComfyUI_VLM_nodes",
+    "name": "ComfyUI_VLM_nodes",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "nodes": [
+      "MoonDream"
+    ]
+  },
+  {
+    "url": "https://github.com/WASasquatch/was-node-suite-comfyui",
+    "name": "was-node-suite-comfyui",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "nodes": [
+      "Save Text File"
+    ]
   }
 ]
