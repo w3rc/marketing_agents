@@ -38,7 +38,6 @@ workflows:
     name: bg_change_api.json
     description: ''
     file: r/bg_change_api.json
-    skip_preprocess: false
     inputs:
       - path: 9.inputs.filename_prefix
         label: filename_prefix
