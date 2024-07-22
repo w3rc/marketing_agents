@@ -1,4 +1,4 @@
-version: 36
+version: 37
 models: models.json
 custom_nodes: custom_nodes.json
 user_models: user_models.json
