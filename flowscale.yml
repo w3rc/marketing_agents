@@ -1,4 +1,4 @@
-version: 37
+version: 38
 models: models.json
 custom_nodes: custom_nodes.json
 user_models: user_models.json
@@ -33,7 +33,6 @@ workflows:
     outputs:
       - label: Output
         demo_type: image
-    skip_preprocess: true
   - id: 2xjtplhcojo
     name: bg_change_api.json
     description: ''
