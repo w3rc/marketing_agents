@@ -34,9 +34,9 @@ workflows:
       - label: Output
         demo_type: image
   - id: 2xjtplhcojo
-    name: bg_change_api.json
+    name: openai.json
     description: ''
-    file: r/bg_change_api.json
+    file: openai/openai_api.json
     inputs:
       - path: 9.inputs.filename_prefix
         label: filename_prefix
